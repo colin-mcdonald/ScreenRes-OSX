@@ -20,7 +20,7 @@
 		A129249818031360006BB364 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12924741803135F006BB364 /* Cocoa.framework */; };
 		A12924A018031360006BB364 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A129249E18031360006BB364 /* InfoPlist.strings */; };
 		A12924A218031360006BB364 /* ScreenResTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12924A118031360006BB364 /* ScreenResTests.m */; };
-		BB5529F5180F668A0058919E /* cg_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = BB5529F3180F668A0058919E /* cg_utils.c */; };
+		BB52095F180F67CE004B68C4 /* cg_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = BB52095E180F67CE004B68C4 /* cg_utils.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		A1015227180BEC1F00909C07 /* Icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon2.png; sourceTree = "<group>"; };
-		A10A4A46180DAC310084E51E /* screenresolution64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = screenresolution64; path = "build-screenresolution/screenresolution64"; sourceTree = "<group>"; };
 		A12924711803135F006BB364 /* ScreenRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12924741803135F006BB364 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A12924771803135F006BB364 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -56,8 +55,8 @@
 		A129249D18031360006BB364 /* ScreenResTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScreenResTests-Info.plist"; sourceTree = "<group>"; };
 		A129249F18031360006BB364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A12924A118031360006BB364 /* ScreenResTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenResTests.m; sourceTree = "<group>"; };
-		BB5529F3180F668A0058919E /* cg_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cg_utils.c; path = screenresolution/cg_utils.c; sourceTree = SOURCE_ROOT; };
-		BB5529F4180F668A0058919E /* cg_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cg_utils.h; path = screenresolution/cg_utils.h; sourceTree = SOURCE_ROOT; };
+		BB52095D180F67CE004B68C4 /* cg_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cg_utils.h; path = screenresolution/cg_utils.h; sourceTree = SOURCE_ROOT; };
+		BB52095E180F67CE004B68C4 /* cg_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cg_utils.c; path = screenresolution/cg_utils.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +102,6 @@
 		A12924731803135F006BB364 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A10A4A46180DAC310084E51E /* screenresolution64 */,
 				A12924741803135F006BB364 /* Cocoa.framework */,
 				A129249618031360006BB364 /* XCTest.framework */,
 				A12924761803135F006BB364 /* Other Frameworks */,
@@ -124,10 +122,10 @@
 		A129247A1803135F006BB364 /* ScreenRes */ = {
 			isa = PBXGroup;
 			children = (
+				BB52095D180F67CE004B68C4 /* cg_utils.h */,
+				BB52095E180F67CE004B68C4 /* cg_utils.c */,
 				A129248618031360006BB364 /* AppDelegate.h */,
 				A129248718031360006BB364 /* AppDelegate.m */,
-				BB5529F3180F668A0058919E /* cg_utils.c */,
-				BB5529F4180F668A0058919E /* cg_utils.h */,
 				A129248918031360006BB364 /* MainMenu.xib */,
 				A129248F18031360006BB364 /* Images.xcassets */,
 				A1015227180BEC1F00909C07 /* Icon2.png */,
@@ -267,7 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A129248818031360006BB364 /* AppDelegate.m in Sources */,
-				BB5529F5180F668A0058919E /* cg_utils.c in Sources */,
+				BB52095F180F67CE004B68C4 /* cg_utils.c in Sources */,
 				A129248E18031360006BB364 /* ScreenRes.xcdatamodeld in Sources */,
 				A129248118031360006BB364 /* main.m in Sources */,
 			);
@@ -404,8 +402,8 @@
 				GCC_PREFIX_HEADER = "ScreenRes/ScreenRes-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/screenresolution",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					../../screenresolution,
 				);
 				INFOPLIST_FILE = "ScreenRes/ScreenRes-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,8 +420,8 @@
 				GCC_PREFIX_HEADER = "ScreenRes/ScreenRes-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/screenresolution",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					../../screenresolution,
 				);
 				INFOPLIST_FILE = "ScreenRes/ScreenRes-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
