@@ -1,0 +1,3 @@
+[submodule "screenresolution"]
+	path = screenresolution
+	url = https://github.com/jhford/screenresolution.git
