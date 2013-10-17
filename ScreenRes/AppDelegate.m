@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "main.h"
+#import "../screenresolution/cg_utils.h"
 
 @interface AppDelegate()
 @property (nonatomic, strong) NSMutableArray *currentDisplayMode;

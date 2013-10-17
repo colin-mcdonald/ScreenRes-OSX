@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A1015228180BEC1F00909C07 /* Icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = A1015227180BEC1F00909C07 /* Icon2.png */; };
-		A10A4A4C180DACCF0084E51E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A10A4A4A180DACCF0084E51E /* main.c */; };
 		A12924751803135F006BB364 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12924741803135F006BB364 /* Cocoa.framework */; };
 		A129247F18031360006BB364 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A129247D18031360006BB364 /* InfoPlist.strings */; };
 		A129248118031360006BB364 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A129248018031360006BB364 /* main.m */; };
@@ -21,6 +20,7 @@
 		A129249818031360006BB364 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12924741803135F006BB364 /* Cocoa.framework */; };
 		A12924A018031360006BB364 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A129249E18031360006BB364 /* InfoPlist.strings */; };
 		A12924A218031360006BB364 /* ScreenResTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12924A118031360006BB364 /* ScreenResTests.m */; };
+		BB5529F5180F668A0058919E /* cg_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = BB5529F3180F668A0058919E /* cg_utils.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,6 @@
 /* Begin PBXFileReference section */
 		A1015227180BEC1F00909C07 /* Icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon2.png; sourceTree = "<group>"; };
 		A10A4A46180DAC310084E51E /* screenresolution64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = screenresolution64; path = "build-screenresolution/screenresolution64"; sourceTree = "<group>"; };
-		A10A4A4A180DACCF0084E51E /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = "build-screenresolution/main.c"; sourceTree = SOURCE_ROOT; };
-		A10A4A4B180DACCF0084E51E /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = main.h; path = "build-screenresolution/main.h"; sourceTree = SOURCE_ROOT; };
 		A12924711803135F006BB364 /* ScreenRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12924741803135F006BB364 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A12924771803135F006BB364 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -58,6 +56,8 @@
 		A129249D18031360006BB364 /* ScreenResTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScreenResTests-Info.plist"; sourceTree = "<group>"; };
 		A129249F18031360006BB364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A12924A118031360006BB364 /* ScreenResTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenResTests.m; sourceTree = "<group>"; };
+		BB5529F3180F668A0058919E /* cg_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cg_utils.c; path = screenresolution/cg_utils.c; sourceTree = SOURCE_ROOT; };
+		BB5529F4180F668A0058919E /* cg_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cg_utils.h; path = screenresolution/cg_utils.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,15 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A10A4A49180DACB70084E51E /* build-screenresolution */ = {
-			isa = PBXGroup;
-			children = (
-				A10A4A4A180DACCF0084E51E /* main.c */,
-				A10A4A4B180DACCF0084E51E /* main.h */,
-			);
-			name = "build-screenresolution";
-			sourceTree = "<group>";
-		};
 		A12924681803135F006BB364 = {
 			isa = PBXGroup;
 			children = (
@@ -133,9 +124,10 @@
 		A129247A1803135F006BB364 /* ScreenRes */ = {
 			isa = PBXGroup;
 			children = (
-				A10A4A49180DACB70084E51E /* build-screenresolution */,
 				A129248618031360006BB364 /* AppDelegate.h */,
 				A129248718031360006BB364 /* AppDelegate.m */,
+				BB5529F3180F668A0058919E /* cg_utils.c */,
+				BB5529F4180F668A0058919E /* cg_utils.h */,
 				A129248918031360006BB364 /* MainMenu.xib */,
 				A129248F18031360006BB364 /* Images.xcassets */,
 				A1015227180BEC1F00909C07 /* Icon2.png */,
@@ -274,8 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10A4A4C180DACCF0084E51E /* main.c in Sources */,
 				A129248818031360006BB364 /* AppDelegate.m in Sources */,
+				BB5529F5180F668A0058919E /* cg_utils.c in Sources */,
 				A129248E18031360006BB364 /* ScreenRes.xcdatamodeld in Sources */,
 				A129248118031360006BB364 /* main.m in Sources */,
 			);
@@ -410,6 +402,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenRes/ScreenRes-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../screenresolution,
+				);
 				INFOPLIST_FILE = "ScreenRes/ScreenRes-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -423,9 +420,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenRes/ScreenRes-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../screenresolution,
+				);
 				INFOPLIST_FILE = "ScreenRes/ScreenRes-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = ../../screenresolution;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
