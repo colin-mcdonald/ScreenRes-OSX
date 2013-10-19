@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1015228180BEC1F00909C07 /* Icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = A1015227180BEC1F00909C07 /* Icon2.png */; };
+		A1015228180BEC1F00909C07 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A1015227180BEC1F00909C07 /* Icon.png */; };
 		A12924751803135F006BB364 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12924741803135F006BB364 /* Cocoa.framework */; };
 		A129247F18031360006BB364 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A129247D18031360006BB364 /* InfoPlist.strings */; };
 		A129248118031360006BB364 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A129248018031360006BB364 /* main.m */; };
@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A1015227180BEC1F00909C07 /* Icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon2.png; sourceTree = "<group>"; };
+		A1015227180BEC1F00909C07 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		A12924711803135F006BB364 /* ScreenRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12924741803135F006BB364 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A12924771803135F006BB364 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -128,7 +128,7 @@
 				A129248718031360006BB364 /* AppDelegate.m */,
 				A129248918031360006BB364 /* MainMenu.xib */,
 				A129248F18031360006BB364 /* Images.xcassets */,
-				A1015227180BEC1F00909C07 /* Icon2.png */,
+				A1015227180BEC1F00909C07 /* Icon.png */,
 				A129248C18031360006BB364 /* ScreenRes.xcdatamodeld */,
 				A129247B18031360006BB364 /* Supporting Files */,
 			);
@@ -243,7 +243,7 @@
 			files = (
 				A129247F18031360006BB364 /* InfoPlist.strings in Resources */,
 				A129249018031360006BB364 /* Images.xcassets in Resources */,
-				A1015228180BEC1F00909C07 /* Icon2.png in Resources */,
+				A1015228180BEC1F00909C07 /* Icon.png in Resources */,
 				A129248518031360006BB364 /* Credits.rtf in Resources */,
 				A129248B18031360006BB364 /* MainMenu.xib in Resources */,
 			);

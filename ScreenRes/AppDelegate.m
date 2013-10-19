@@ -7,13 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "../screenresolution/cg_utils.h"
+#import "cg_utils.h"
 
 @interface AppDelegate()
-@property (nonatomic, strong) NSMutableArray *currentDisplayMode;
-@property (nonatomic, strong) NSMutableArray *displayModesArray;
-@property (nonatomic, strong) NSMutableArray *menuItemsArray;
-@property (nonatomic, strong) NSStatusItem *statusItem;
+    @property (nonatomic, strong) NSMutableArray *currentDisplayMode;
+    @property (nonatomic, strong) NSMutableArray *displayModesArray;
+    @property (nonatomic, strong) NSMutableArray *menuItemsArray;
+    @property (nonatomic, strong) NSStatusItem *statusItem;
 @end
 
 @implementation AppDelegate
@@ -41,7 +41,7 @@
     
     if(nil == self.statusItem) {
         self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-        [self.statusItem setImage:[NSImage imageNamed:@"Icon2.png"]];
+        [self.statusItem setImage:[NSImage imageNamed:@"Icon.png"]];
         self.statusItem.image.size = NSMakeSize(19, 19);
         [self.statusItem setHighlightMode:YES];
     }
@@ -236,54 +236,6 @@
 -(IBAction) quitApp:(id) sender {
     [[NSApplication sharedApplication] terminate:nil];
 }
-
-/*
-unsigned int setDisplayToMode(CGDirectDisplayID display, CGDisplayModeRef mode) {
-    NSLog(@"%d", display);
-    CGError rc;
-    CGDisplayConfigRef config;
-    rc = CGBeginDisplayConfiguration(&config);
-    if (rc != kCGErrorSuccess) {
-        NSLog(@"Error: failed CGBeginDisplayConfiguration err(%u)", rc);
-        return 0;
-    }
-    rc = CGConfigureDisplayWithDisplayMode(config, display, mode, NULL);
-    if (rc != kCGErrorSuccess) {
-        NSLog(@"Error: failed CGConfigureDisplayWithDisplayMode err(%u)", rc);
-        return 0;
-    }
-    rc = CGCompleteDisplayConfiguration(config, kCGConfigureForSession);
-    if (rc != kCGErrorSuccess) {
-        NSLog(@"Error: failed CGCompleteDisplayConfiguration err(%u)", rc);
-        return 0;
-    }
-    return 1;
-}
-
-size_t bitDepth(CGDisplayModeRef mode) {
-    size_t depth = 0;
-    CFStringRef pixelEncoding = CGDisplayModeCopyPixelEncoding(mode);
-    // my numerical representation for kIO16BitFloatPixels and kIO32bitFloatPixels
-    // are made up and possibly non-sensical
-    if (kCFCompareEqualTo == CFStringCompare(pixelEncoding, CFSTR(kIO32BitFloatPixels), kCFCompareCaseInsensitive)) {
-        depth = 96;
-    } else if (kCFCompareEqualTo == CFStringCompare(pixelEncoding, CFSTR(kIO64BitDirectPixels), kCFCompareCaseInsensitive)) {
-        depth = 64;
-    } else if (kCFCompareEqualTo == CFStringCompare(pixelEncoding, CFSTR(kIO16BitFloatPixels), kCFCompareCaseInsensitive)) {
-        depth = 48;
-    } else if (kCFCompareEqualTo == CFStringCompare(pixelEncoding, CFSTR(IO32BitDirectPixels), kCFCompareCaseInsensitive)) {
-        depth = 32;
-    } else if (kCFCompareEqualTo == CFStringCompare(pixelEncoding, CFSTR(kIO30BitDirectPixels), kCFCompareCaseInsensitive)) {
-        depth = 30;
-    } else if (kCFCompareEqualTo == CFStringCompare(pixelEncoding, CFSTR(IO16BitDirectPixels), kCFCompareCaseInsensitive)) {
-        depth = 16;
-    } else if (kCFCompareEqualTo == CFStringCompare(pixelEncoding, CFSTR(IO8BitIndexedPixels), kCFCompareCaseInsensitive)) {
-        depth = 8;
-    }
-    CFRelease(pixelEncoding);
-    return depth;
-}
-*/
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "m.com.colin-mcdonald.ScreenRes" in the user's Application Support directory.
 - (NSURL *)applicationFilesDirectory
