@@ -13,8 +13,6 @@
 		A129248118031360006BB364 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A129248018031360006BB364 /* main.m */; };
 		A129248518031360006BB364 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A129248318031360006BB364 /* Credits.rtf */; };
 		A129248818031360006BB364 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A129248718031360006BB364 /* AppDelegate.m */; };
-		A129248B18031360006BB364 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A129248918031360006BB364 /* MainMenu.xib */; };
-		A129248E18031360006BB364 /* ScreenRes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A129248C18031360006BB364 /* ScreenRes.xcdatamodeld */; };
 		A129249018031360006BB364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A129248F18031360006BB364 /* Images.xcassets */; };
 		A129249718031360006BB364 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A129249618031360006BB364 /* XCTest.framework */; };
 		A129249818031360006BB364 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12924741803135F006BB364 /* Cocoa.framework */; };
@@ -47,8 +45,6 @@
 		A129248418031360006BB364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		A129248618031360006BB364 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A129248718031360006BB364 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A129248A18031360006BB364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A129248D18031360006BB364 /* ScreenRes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScreenRes.xcdatamodel; sourceTree = "<group>"; };
 		A129248F18031360006BB364 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A129249518031360006BB364 /* ScreenResTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenResTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A129249618031360006BB364 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -126,10 +122,8 @@
 				BB52095E180F67CE004B68C4 /* cg_utils.c */,
 				A129248618031360006BB364 /* AppDelegate.h */,
 				A129248718031360006BB364 /* AppDelegate.m */,
-				A129248918031360006BB364 /* MainMenu.xib */,
 				A129248F18031360006BB364 /* Images.xcassets */,
 				A1015227180BEC1F00909C07 /* Icon.png */,
-				A129248C18031360006BB364 /* ScreenRes.xcdatamodeld */,
 				A129247B18031360006BB364 /* Supporting Files */,
 			);
 			path = ScreenRes;
@@ -245,7 +239,6 @@
 				A129249018031360006BB364 /* Images.xcassets in Resources */,
 				A1015228180BEC1F00909C07 /* Icon.png in Resources */,
 				A129248518031360006BB364 /* Credits.rtf in Resources */,
-				A129248B18031360006BB364 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +259,6 @@
 			files = (
 				A129248818031360006BB364 /* AppDelegate.m in Sources */,
 				BB52095F180F67CE004B68C4 /* cg_utils.c in Sources */,
-				A129248E18031360006BB364 /* ScreenRes.xcdatamodeld in Sources */,
 				A129248118031360006BB364 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,14 +296,6 @@
 				A129248418031360006BB364 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		A129248918031360006BB364 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A129248A18031360006BB364 /* Base */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		A129249E18031360006BB364 /* InfoPlist.strings */ = {
@@ -500,19 +484,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A129248C18031360006BB364 /* ScreenRes.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A129248D18031360006BB364 /* ScreenRes.xcdatamodel */,
-			);
-			currentVersion = A129248D18031360006BB364 /* ScreenRes.xcdatamodel */;
-			path = ScreenRes.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A12924691803135F006BB364 /* Project object */;
 }
