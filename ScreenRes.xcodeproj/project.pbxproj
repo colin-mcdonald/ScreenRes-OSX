@@ -18,6 +18,7 @@
 		A129249818031360006BB364 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12924741803135F006BB364 /* Cocoa.framework */; };
 		A12924A018031360006BB364 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A129249E18031360006BB364 /* InfoPlist.strings */; };
 		A12924A218031360006BB364 /* ScreenResTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12924A118031360006BB364 /* ScreenResTests.m */; };
+		A16DA1CF183E84510045227E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16DA1CE183E84510045227E /* MainMenu.xib */; };
 		BB52095F180F67CE004B68C4 /* cg_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = BB52095E180F67CE004B68C4 /* cg_utils.c */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		A129249D18031360006BB364 /* ScreenResTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScreenResTests-Info.plist"; sourceTree = "<group>"; };
 		A129249F18031360006BB364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A12924A118031360006BB364 /* ScreenResTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenResTests.m; sourceTree = "<group>"; };
+		A16DA1CE183E84510045227E /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		BB52095D180F67CE004B68C4 /* cg_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cg_utils.h; path = screenresolution/cg_utils.h; sourceTree = SOURCE_ROOT; };
 		BB52095E180F67CE004B68C4 /* cg_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cg_utils.c; path = screenresolution/cg_utils.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 				A129248F18031360006BB364 /* Images.xcassets */,
 				A1015227180BEC1F00909C07 /* Icon.png */,
 				A129247B18031360006BB364 /* Supporting Files */,
+				A16DA1CE183E84510045227E /* MainMenu.xib */,
 			);
 			path = ScreenRes;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A129247F18031360006BB364 /* InfoPlist.strings in Resources */,
+				A16DA1CF183E84510045227E /* MainMenu.xib in Resources */,
 				A129249018031360006BB364 /* Images.xcassets in Resources */,
 				A1015228180BEC1F00909C07 /* Icon.png in Resources */,
 				A129248518031360006BB364 /* Credits.rtf in Resources */,
