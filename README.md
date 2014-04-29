@@ -19,11 +19,11 @@ There are other apps that do this, but I haven't seen one that is free/open sour
 3. git (if you want to build yourself)
 
 ## Screenshots
-![Alt text](http://bim.colin-mcdonald.com/static/screenres_app/screenshot.png?raw=true "ScreenRes-OSX Screenshot")
+![Alt text](http://screenres.colin-mcdonald.com/ScreenRes.zipscreenshot.png?raw=true "ScreenRes-OSX Screenshot")
 
 ## Binary Download
 You can download a zipped, pre-compiled binary from:
-http://bim.colin-mcdonald.com/static/screenres_app/ScreenRes.zip
+http://screenres.colin-mcdonald.com/ScreenRes.zip
 
 The binary is x86_64 only, which should be fine for all newer Macs.
 
