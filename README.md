@@ -19,7 +19,7 @@ There are other apps that do this, but I haven't seen one that is free/open sour
 3. git (if you want to build yourself)
 
 ## Screenshots
-![Alt text](http://screenres.colin-mcdonald.com/ScreenRes.zipscreenshot.png?raw=true "ScreenRes-OSX Screenshot")
+![Alt text](http://screenres.colin-mcdonald.com/screenshot.png?raw=true "ScreenRes-OSX Screenshot")
 
 ## Binary Download
 You can download a zipped, pre-compiled binary from:
