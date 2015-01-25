@@ -1,3 +1,6 @@
 [submodule "screenresolution"]
 	path = screenresolution
 	url = https://github.com/jhford/screenresolution.git
+[submodule "Sparkle"]
+	path = Sparkle
+	url = https://github.com/sparkle-project/Sparkle.git
