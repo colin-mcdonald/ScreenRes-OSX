@@ -19,7 +19,12 @@
 		A12924A018031360006BB364 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A129249E18031360006BB364 /* InfoPlist.strings */; };
 		A12924A218031360006BB364 /* ScreenResTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12924A118031360006BB364 /* ScreenResTests.m */; };
 		A16DA1CF183E84510045227E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16DA1CE183E84510045227E /* MainMenu.xib */; };
-		BB52095F180F67CE004B68C4 /* cg_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = BB52095E180F67CE004B68C4 /* cg_utils.c */; };
+		BB6119001A2A594900CEAEFC /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6118FF1A2A594900CEAEFC /* Sparkle.framework */; };
+		BB6119031A2A5D3000CEAEFC /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB6118FF1A2A594900CEAEFC /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BBB1547F1A474A9100188035 /* cg_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = BBB1547D1A474A9100188035 /* cg_utils.c */; };
+		BBB154811A474BF400188035 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB154801A474BF400188035 /* IOKit.framework */; };
+		BBB154831A47585800188035 /* DisplayMode.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB154821A47585800188035 /* DisplayMode.m */; };
+		BBB154871A475C2A00188035 /* DiplayMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB154861A475C2A00188035 /* DiplayMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,19 @@
 			remoteInfo = ScreenRes;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB6119021A2A5D1900CEAEFC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BB6119031A2A5D3000CEAEFC /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A1015227180BEC1F00909C07 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -53,8 +71,21 @@
 		A129249F18031360006BB364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A12924A118031360006BB364 /* ScreenResTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenResTests.m; sourceTree = "<group>"; };
 		A16DA1CE183E84510045227E /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		BB52095D180F67CE004B68C4 /* cg_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cg_utils.h; path = screenresolution/cg_utils.h; sourceTree = SOURCE_ROOT; };
-		BB52095E180F67CE004B68C4 /* cg_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cg_utils.c; path = screenresolution/cg_utils.c; sourceTree = SOURCE_ROOT; };
+		BB6118F41A2A580B00CEAEFC /* signed-test-file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "signed-test-file.txt"; sourceTree = "<group>"; };
+		BB6118F51A2A580B00CEAEFC /* test-pubkey.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-pubkey.pem"; sourceTree = "<group>"; };
+		BB6118F61A2A580B00CEAEFC /* SparkleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SparkleTests-Info.plist"; sourceTree = "<group>"; };
+		BB6118F71A2A580B00CEAEFC /* SUBinaryDeltaTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUBinaryDeltaTest.m; sourceTree = "<group>"; };
+		BB6118F81A2A580B00CEAEFC /* SUDSAVerifierTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUDSAVerifierTest.m; sourceTree = "<group>"; };
+		BB6118F91A2A580B00CEAEFC /* SUUpdaterTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUUpdaterTest.m; sourceTree = "<group>"; };
+		BB6118FA1A2A580B00CEAEFC /* SUVersionComparisonTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUVersionComparisonTest.m; sourceTree = "<group>"; };
+		BB6118FF1A2A594900CEAEFC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Sparkle-1.8.0/Sparkle.framework"; sourceTree = "<group>"; };
+		BBB1547D1A474A9100188035 /* cg_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cg_utils.c; sourceTree = "<group>"; };
+		BBB1547E1A474A9100188035 /* cg_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cg_utils.h; sourceTree = "<group>"; };
+		BBB154801A474BF400188035 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		BBB154821A47585800188035 /* DisplayMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayMode.m; path = ../DisplayMode.m; sourceTree = "<group>"; };
+		BBB154841A47586F00188035 /* DisplayMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayMode.h; sourceTree = "<group>"; };
+		BBB154851A475C1000188035 /* DisplayMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayMonitor.h; sourceTree = "<group>"; };
+		BBB154861A475C2A00188035 /* DiplayMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiplayMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +93,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB154811A474BF400188035 /* IOKit.framework in Frameworks */,
 				A12924751803135F006BB364 /* Cocoa.framework in Frameworks */,
+				BB6119001A2A594900CEAEFC /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +133,9 @@
 		A12924731803135F006BB364 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBB154801A474BF400188035 /* IOKit.framework */,
+				BB6118FF1A2A594900CEAEFC /* Sparkle.framework */,
+				BB6118F21A2A580B00CEAEFC /* Tests */,
 				A12924741803135F006BB364 /* Cocoa.framework */,
 				A129249618031360006BB364 /* XCTest.framework */,
 				A12924761803135F006BB364 /* Other Frameworks */,
@@ -120,8 +156,12 @@
 		A129247A1803135F006BB364 /* ScreenRes */ = {
 			isa = PBXGroup;
 			children = (
-				BB52095D180F67CE004B68C4 /* cg_utils.h */,
-				BB52095E180F67CE004B68C4 /* cg_utils.c */,
+				BBB154851A475C1000188035 /* DisplayMonitor.h */,
+				BBB154861A475C2A00188035 /* DiplayMonitor.m */,
+				BBB154841A47586F00188035 /* DisplayMode.h */,
+				BBB154821A47585800188035 /* DisplayMode.m */,
+				BBB1547D1A474A9100188035 /* cg_utils.c */,
+				BBB1547E1A474A9100188035 /* cg_utils.h */,
 				A129248618031360006BB364 /* AppDelegate.h */,
 				A129248718031360006BB364 /* AppDelegate.m */,
 				A129248F18031360006BB364 /* Images.xcassets */,
@@ -162,6 +202,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BB6118F21A2A580B00CEAEFC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BB6118F31A2A580B00CEAEFC /* Resources */,
+				BB6118F61A2A580B00CEAEFC /* SparkleTests-Info.plist */,
+				BB6118F71A2A580B00CEAEFC /* SUBinaryDeltaTest.m */,
+				BB6118F81A2A580B00CEAEFC /* SUDSAVerifierTest.m */,
+				BB6118F91A2A580B00CEAEFC /* SUUpdaterTest.m */,
+				BB6118FA1A2A580B00CEAEFC /* SUVersionComparisonTest.m */,
+			);
+			name = Tests;
+			path = Sparkle/Tests;
+			sourceTree = "<group>";
+		};
+		BB6118F31A2A580B00CEAEFC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB6118F41A2A580B00CEAEFC /* signed-test-file.txt */,
+				BB6118F51A2A580B00CEAEFC /* test-pubkey.pem */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +235,7 @@
 				A129246D1803135F006BB364 /* Sources */,
 				A129246E1803135F006BB364 /* Frameworks */,
 				A129246F1803135F006BB364 /* Resources */,
+				BB6119021A2A5D1900CEAEFC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -261,9 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB154871A475C2A00188035 /* DiplayMonitor.m in Sources */,
 				A129248818031360006BB364 /* AppDelegate.m in Sources */,
-				BB52095F180F67CE004B68C4 /* cg_utils.c in Sources */,
+				BBB1547F1A474A9100188035 /* cg_utils.c in Sources */,
 				A129248118031360006BB364 /* main.m in Sources */,
+				BBB154831A47585800188035 /* DisplayMode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +452,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sparkle-1.8.0",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenRes/ScreenRes-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -394,7 +464,9 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "ScreenRes/ScreenRes-Info.plist";
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -404,6 +476,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sparkle-1.8.0",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenRes/ScreenRes-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -412,7 +488,9 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "ScreenRes/ScreenRes-Info.plist";
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

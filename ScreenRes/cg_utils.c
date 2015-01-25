@@ -209,7 +209,6 @@ char* getPreferredDisplayName(CGDirectDisplayID displayID)
             // this array will be populated with the localized names for the display (i.e. names of the
             // display in different languages)
             CFDictionaryRef namesForDisplay = CFDictionaryGetValue(displayInfoDict, CFSTR(kDisplayProductName));        
-            CFStringRef value;
 
             if (namesForDisplay)
             {
@@ -224,5 +223,7 @@ char* getPreferredDisplayName(CGDirectDisplayID displayID)
         IOObjectRelease(displayServicePort);
     }
 
+    //printf("\n\nHERE:%d  -> %s\n\n", displayID, name);
+    
     return strdup(name);
 }
