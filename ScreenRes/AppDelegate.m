@@ -102,6 +102,7 @@
             NSString *menuItemTitle = displayMode.resolutionDescription;
             
             // make sure no duplicate menu items are shown
+            // TODO: make sure you show the active one!
             if ([menuItemTitle isEqualToString:currTitle]) {
                 continue;
             }
