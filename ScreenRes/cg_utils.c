@@ -220,10 +220,14 @@ char* getPreferredDisplayName(CGDirectDisplayID displayID)
             CFRelease(displayInfoDict);
         }
 
-        IOObjectRelease(displayServicePort);
+        // enabling this will only allow this function to run
+        // once :(
+        //IOObjectRelease(displayServicePort);
     }
 
     //printf("\n\nHERE:%d  -> %s\n\n", displayID, name);
     
     return strdup(name);
 }
+
+
