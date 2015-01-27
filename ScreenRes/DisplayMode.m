@@ -26,7 +26,11 @@
 - (NSString *) aspectRatioDescription {
     float division = self.width / self.height;
     
-    if (division == 16.0f/9.0f || division == 384.0f/683.0f || division == 720.0f/480.0f )
+    if (division == 16.0f/9.0f ||
+        division == 848.0f/480.0f ||
+        division == 384.0f/683.0f ||
+        division == 720.0f/480.0f ||
+        division == 1360.0f/768.0f )
         return @"16:9";
     else if (division == 16.0f/10.0f)
         return @"16:10";
