@@ -21,10 +21,10 @@
 		A16DA1CF183E84510045227E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16DA1CE183E84510045227E /* MainMenu.xib */; };
 		BB6119001A2A594900CEAEFC /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6118FF1A2A594900CEAEFC /* Sparkle.framework */; };
 		BB6119031A2A5D3000CEAEFC /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB6118FF1A2A594900CEAEFC /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BBAC367A1A772C1100C37034 /* DisplayMode.m in Sources */ = {isa = PBXBuildFile; fileRef = BBAC36791A772C1100C37034 /* DisplayMode.m */; };
 		BBB1547F1A474A9100188035 /* cg_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = BBB1547D1A474A9100188035 /* cg_utils.c */; };
 		BBB154811A474BF400188035 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB154801A474BF400188035 /* IOKit.framework */; };
-		BBB154831A47585800188035 /* DisplayMode.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB154821A47585800188035 /* DisplayMode.m */; };
-		BBB154871A475C2A00188035 /* DiplayMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB154861A475C2A00188035 /* DiplayMonitor.m */; };
+		BBB154871A475C2A00188035 /* DisplayMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB154861A475C2A00188035 /* DisplayMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +79,13 @@
 		BB6118F91A2A580B00CEAEFC /* SUUpdaterTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUUpdaterTest.m; sourceTree = "<group>"; };
 		BB6118FA1A2A580B00CEAEFC /* SUVersionComparisonTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUVersionComparisonTest.m; sourceTree = "<group>"; };
 		BB6118FF1A2A594900CEAEFC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Sparkle-1.8.0/Sparkle.framework"; sourceTree = "<group>"; };
+		BBAC36791A772C1100C37034 /* DisplayMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayMode.m; sourceTree = "<group>"; };
 		BBB1547D1A474A9100188035 /* cg_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cg_utils.c; sourceTree = "<group>"; };
 		BBB1547E1A474A9100188035 /* cg_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cg_utils.h; sourceTree = "<group>"; };
 		BBB154801A474BF400188035 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		BBB154821A47585800188035 /* DisplayMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayMode.m; path = ../DisplayMode.m; sourceTree = "<group>"; };
 		BBB154841A47586F00188035 /* DisplayMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayMode.h; sourceTree = "<group>"; };
 		BBB154851A475C1000188035 /* DisplayMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayMonitor.h; sourceTree = "<group>"; };
-		BBB154861A475C2A00188035 /* DiplayMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiplayMonitor.m; sourceTree = "<group>"; };
+		BBB154861A475C2A00188035 /* DisplayMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				BBB154851A475C1000188035 /* DisplayMonitor.h */,
-				BBB154861A475C2A00188035 /* DiplayMonitor.m */,
+				BBB154861A475C2A00188035 /* DisplayMonitor.m */,
 				BBB154841A47586F00188035 /* DisplayMode.h */,
-				BBB154821A47585800188035 /* DisplayMode.m */,
+				BBAC36791A772C1100C37034 /* DisplayMode.m */,
 				BBB1547D1A474A9100188035 /* cg_utils.c */,
 				BBB1547E1A474A9100188035 /* cg_utils.h */,
 				A129248618031360006BB364 /* AppDelegate.h */,
@@ -270,7 +270,7 @@
 		A12924691803135F006BB364 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Colin McDonald";
 				TargetAttributes = {
 					A129249418031360006BB364 = {
@@ -325,11 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBB154871A475C2A00188035 /* DiplayMonitor.m in Sources */,
+				BBB154871A475C2A00188035 /* DisplayMonitor.m in Sources */,
+				BBAC367A1A772C1100C37034 /* DisplayMode.m in Sources */,
 				A129248818031360006BB364 /* AppDelegate.m in Sources */,
 				BBB1547F1A474A9100188035 /* cg_utils.c in Sources */,
 				A129248118031360006BB364 /* main.m in Sources */,
-				BBB154831A47585800188035 /* DisplayMode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +466,7 @@
 				INFOPLIST_FILE = "ScreenRes/ScreenRes-Info.plist";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -490,7 +490,7 @@
 				INFOPLIST_FILE = "ScreenRes/ScreenRes-Info.plist";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
