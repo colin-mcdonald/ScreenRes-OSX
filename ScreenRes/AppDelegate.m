@@ -50,30 +50,26 @@
     
     uint32_t displayCount = 0;
     uint32_t activeDisplayCount = 0;
-    CGDirectDisplayID *activeDisplays = NULL;
     
     CGError rc;
     rc = CGGetActiveDisplayList(0, NULL, &activeDisplayCount);
-    if (rc != kCGErrorSuccess) {
+    if (rc == kCGErrorSuccess) {
+        CGDirectDisplayID activeDisplays[activeDisplayCount];
+        
+        //TODO: should check the 'online' display list as well...then we can tell if
+        // hardware mirroring is being used, and can indicate that in the GUI
+        rc = CGGetActiveDisplayList(activeDisplayCount, activeDisplays, &displayCount);
+        if (rc != kCGErrorSuccess) {
+            NSLog(@"Error: failed to get list of active displays");
+        }
+        
+        // populate available display modes for each display
+        for(int i=0; i < activeDisplayCount; i++) {
+            DisplayMonitor *dm = [[DisplayMonitor alloc] initWithCGDisplayID:activeDisplays[i]];
+            [self.displaysList addObject:dm];
+        }
+    } else {
         NSLog(@"Error: failed to get list of active displays");
-    }
-    
-    activeDisplays = (CGDirectDisplayID *) malloc(activeDisplayCount * sizeof(CGDirectDisplayID));
-    if (activeDisplays == NULL) {
-        NSLog(@"Error: could not allocate memory for display list");
-    }
-    
-    //TODO: should check the 'online' display list as well...then we can tell if
-    // hardware mirroring is being used, and can indicate that in the GUI
-    rc = CGGetActiveDisplayList(activeDisplayCount, activeDisplays, &displayCount);
-    if (rc != kCGErrorSuccess) {
-        NSLog(@"Error: failed to get list of active displays");
-    }
-    
-    // populate available display modes for each display
-    for(int i=0; i < activeDisplayCount; i++) {
-        DisplayMonitor *dm = [[DisplayMonitor alloc] initWithCGDisplayID:activeDisplays[i]];
-        [self.displaysList addObject:dm];
     }
 }
 

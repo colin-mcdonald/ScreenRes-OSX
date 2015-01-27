@@ -14,16 +14,18 @@
 - (DisplayMonitor *) initWithCGDisplayID:(CGDirectDisplayID) displayID {
     if(self = [super init]) {
         _cgDisplayID = displayID;
+        //CFRelease(displayID);
+        
         _displayIndex = 0;
         _displayName = [NSString stringWithFormat:@"%s", getPreferredDisplayName(displayID)];
         
         // set current mode
-        CGDisplayModeRef currentMode = CGDisplayCopyDisplayMode(displayID);
+        CGDisplayModeRef currentMode = CGDisplayCopyDisplayMode(_cgDisplayID);
         
         // populate display modes
         NSMutableArray *displayModesTemp = [[NSMutableArray alloc] init];
         
-        CFArrayRef allModes = CGDisplayCopyAllDisplayModes(displayID, NULL);
+        CFArrayRef allModes = CGDisplayCopyAllDisplayModes(_cgDisplayID, NULL);
         
         // sort the array of display modes
         CFMutableArrayRef allModesSorted =  CFArrayCreateMutableCopy(
@@ -49,6 +51,10 @@
         }
         
         _displayModes = [NSArray arrayWithArray:displayModesTemp];
+        
+        CFRelease(currentMode);
+        CFRelease(allModesSorted);
+        CFRelease(allModes);
     }
     
     return self;
